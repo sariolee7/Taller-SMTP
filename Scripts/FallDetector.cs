@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FallDetector : MonoBehaviour
 {
-    public float fallLimit = -10f; // Altura límite
+    public float fallLimit = -10f;
 
     void Update()
     {
@@ -14,9 +14,7 @@ public class FallDetector : MonoBehaviour
 
     void Lose()
     {
-        Debug.Log("Perdiste 😢");
-
-        // Opcional: reiniciar escena
+        Debug.Log("Perdiste");
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
         );

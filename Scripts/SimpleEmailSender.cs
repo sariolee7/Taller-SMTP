@@ -14,7 +14,7 @@ public class SimpleEmailSender : MonoBehaviour
     public float fallLimit = -10f;
 
     public GameObject menuCanvas;
-    public TMP_InputField emailInput;  // 🔹 ESTA LÍNEA FALTABA
+    public TMP_InputField emailInput;
     private string toEmail;
 
 void Start()
@@ -69,14 +69,8 @@ void Start()
         }
 
         Debug.Log("Correo guardado: " + toEmail);
-
-        // 🔹 Ocultar menú
         menuCanvas.SetActive(false);
-
-        // 🔹 Reanudar juego
         Time.timeScale = 1f;
-
-        // 🔹 Ocultar y bloquear mouse
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -90,8 +84,8 @@ void Start()
             return;
         }
 
-        string fromEmail = "sari.160903ingmu@gmail.com";
-        string password = "nola hsab cvcd gmef";
+        string fromEmail = "Colocar correo";
+        string password = "Colocar contraseña";
 
         MailMessage mail = new MailMessage();
         mail.From = new MailAddress(fromEmail);
